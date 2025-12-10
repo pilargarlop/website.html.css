@@ -1,0 +1,176 @@
+/*=============== BASE ===============*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #ffffff;
+}
+
+
+/*=============== CONTAINER ===============*/
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1000px;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 100;
+  background-color: transparent;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+
+/*=============== HOME ===============*/
+.home {
+  height: 100vh;
+  position: relative;
+}
+
+.home-img {
+  object-fit: cover;
+  height: 100%;
+  position: absolute;
+}
+
+.home-container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.home-data {
+  max-width: 350px;
+  color: white;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #0077ff;
+  color: white;
+  border-radius: 6px;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+/*=============== ABOUT ===============*/
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-container {
+  display: grid;
+  gap: 30px;
+}
+
+/* Imágenes alineadas en fila */
+.about-img {
+  display: flex;
+  gap: 15px;
+}
+
+.about-img img {
+  flex: 1;
+  max-width: 32%; /* Tres imágenes por fila */
+}
+
+/*=============== DISCOVER ===============*/
+.discover-container {
+  display: flex;
+  gap: 20px;
+}
+
+.discover-card {
+  flex: 1;
+  max-width: 32%; /* Tres tarjetas por fila */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+/*=============== PLACES ===============*/
+.place-container {
+  display: flex;
+  gap: 20px;
+}
+
+.place-card {
+  flex: 1;
+  max-width: 32%; /* Tres tarjetas por fila */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.place-rating {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/*=============== FOOTER ===============*/
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #000000;
+  margin-top: 50px;
+}
+
