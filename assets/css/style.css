@@ -1,4 +1,3 @@
-/*=============== BASE ===============*/
 
 * {
   box-sizing: border-box;
@@ -61,22 +60,24 @@ body {
   gap: 15px;
   list-style: none;
 }
-
 .nav-link {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1.1rem;
+  text-decoration: none;    
+  color: #ffffff;            
+  padding: 6px 12px;         
+  border-radius: 6px;        
+  transition: .3s ease;      
 }
 
 .nav-toggle{
   color:#fff
 }
 
-.nav-list a:hover .header{
-    background-color: rgb(247, 45, 45);
 
+
+.nav-link:hover {
+  background-color: #ffffff; 
+  color: rgb(47, 120, 122);  
 }
-
 
 /*=============== HOME ===============*/
 .home {
@@ -118,19 +119,20 @@ body {
 /*=============== ABOUT ===============*/
 .section {
   padding: 80px 0;
-  position: center;
 }
 
 .section-title {
   font-size: 2rem;
   margin-bottom: 20px;
-  position: center;
+  display: flex;
+  justify-content: center;
 }
 
 .about-container {
   display: grid;
   gap: 30px;
 }
+
 
 /* Imágenes alineadas en fila */
 .about-img {
@@ -141,28 +143,48 @@ body {
 .about-img img {
   flex: 1;
   max-width: 32%; /* Tres imágenes por fila */
+  border-radius: 10px;
+  transition: transform .4s ease, box-shadow .4s ease;
 }
+
+/* EFECTO HOVER IMÁGENES */
+.about-img img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
 
 /*=============== DISCOVER ===============*/
 .discover-container {
   display: flex;
   gap: 20px;
-  position: center;
+}
+.discover-card * {
+  padding: 10px 15px;
 }
 
 .discover-card {
   flex: 1;
-  max-width: 32%; /* Tres tarjetas por fila */
+  max-width: 32%;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,.2);
-  position: center;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+/* EFECTO HOVER TARJETAS */
+.discover-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,.3);
 }
 
 .discover-section-title {
-  text-align: center;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
+
+
 
 /*=============== PLACES ===============*/
 .place-container {
@@ -172,10 +194,23 @@ body {
 
 .place-card {
   flex: 1;
-  max-width: 32%; /* Tres tarjetas por fila */
+  max-width: 32%;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+
+.place-card h3,
+.place-card p {
+  padding: 10px 15px;
+}
+
+/* EFECTO HOVER TARJETAS PLACES */
+.place-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,.3);
 }
 
 .place-rating {
@@ -187,11 +222,88 @@ body {
   border-radius: 5px;
 }
 
-/*=============== FOOTER ===============*/
-.footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #000000;
-  margin-top: 50px;
+.place-rating span {
+  color: #fff;
+  font-weight: bold;
 }
 
+/*=============== SPONSORS ===============*/
+.sponsor__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, auto));
+  justify-items: center;
+  align-items: center;
+  column-gap: 2rem;    
+  row-gap: 2rem;       
+  padding: 2rem 0;
+  background-color: #f5f5f5; 
+
+  
+}
+
+.sponsor__img {
+  width: 80px;
+  transition: var(--img-transition);
+}
+
+.sponsor__content:hover .sponsor__img {
+  filter: invert(0.5);
+}
+
+/*=============== FOOTER ===============*/
+footer {
+  width: 100%;
+  background-color: rgba(124, 117, 117, 0.95); 
+}
+
+
+.footer__container {
+  padding: 4rem 0 2rem;
+  background-color: transparent; 
+  list-style: none;  
+  padding: 0;         
+  margin: 5;
+}
+
+.footer__container {
+  background-color: rgba(124, 117, 117, 0.95);
+  padding: 4rem 0 2rem;
+  row-gap: 2rem;
+}
+
+.footer__content,
+.footer__title,
+.footer__subtitle,
+.footer__description,
+.footer__social,
+.footer__item,
+.footer__rights,
+.footer__copy,
+.footer__terms-link {
+  color: #fff;
+  list-style: none;
+  
+}
+
+.footer__title,
+.footer__subtitle,
+.footer__description,
+.footer__social,
+.footer__link,
+.footer__terms {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__item {
+  margin-bottom: var(--mb-0-75);
+}
+
+.footer__terms {
+  column-gap: 1.5rem;
+}
+
+.footer__link:hover,
+.footer__terms-link:hover {
+  color: #ddd;
+}
